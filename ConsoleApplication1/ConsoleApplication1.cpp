@@ -1,7 +1,9 @@
-﻿#include <iostream>
+#include <iostream>
 #include <random>
+#include <ctime>
 using namespace std;
 int main() {
+    srand(time(NULL));
     const int arraySize = 20;
     int x[arraySize];
     int sum = 0;
@@ -17,7 +19,7 @@ int main() {
         sum += x[i];
     }
     cout << "\n" << "평균은" << sum / arraySize << endl;
-    for (int i = 0; i < arraySize; ++i) {
+    for (int i = 0; i < arraySize; i++) {
         int sigma = (x[i] - sum / arraySize);
     }
     cout <<  "표준편차는" << sigma / (arraySize-1) << endl;
